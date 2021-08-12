@@ -1,0 +1,21 @@
+{
+    "name": "MatrixMotion",
+    "version": "1.0.0",
+    "description": "The extension for MATRIX Motion Sensor",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "MxMotion.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
