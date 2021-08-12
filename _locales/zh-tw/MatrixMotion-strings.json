@@ -1,0 +1,8 @@
+{
+  "MxMotion.init|block": "start up the motion sensor|set filter %filter",
+  "MxMotion.readAccel|block": "read accel data %axis from sensor",
+  "MxMotion.readEular|block": "read eular angle %axis from sensor",
+  "MxMotion.readGyro|block": "read gyro data %axis from sensor",
+  "MxMotion|block": "MxMotion",
+  "{id:category}MxMotion": "MxMotion"
+}

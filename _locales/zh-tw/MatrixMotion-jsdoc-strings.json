@@ -1,0 +1,10 @@
+{
+  "MxMotion.init": "start up the motion sensor",
+  "MxMotion.init|param|filter": "[0-3] set the type of filter; eg: 0, 1",
+  "MxMotion.readAccel": "read Motion accel data from sensor",
+  "MxMotion.readAccel|param|axis": "[0-2] set the data of axis; eg: 0, 1",
+  "MxMotion.readEular": "read Motion eular data from sensor",
+  "MxMotion.readEular|param|axis": "[0-2] set the data of axis; eg: 0, 1",
+  "MxMotion.readGyro": "read Motion gyro data from sensor",
+  "MxMotion.readGyro|param|axis": "[0-2] set the data of axis; eg: 0, 1"
+}
