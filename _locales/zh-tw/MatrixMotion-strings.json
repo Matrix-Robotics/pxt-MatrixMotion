@@ -1,8 +1,8 @@
 {
-  "MxMotion.init|block": "start up the motion sensor|set filter %filter",
-  "MxMotion.readAccel|block": "read accel data %axis from sensor",
-  "MxMotion.readEular|block": "read eular angle %axis from sensor",
-  "MxMotion.readGyro|block": "read gyro data %axis from sensor",
+  "MxMotion.init|block": "啟動運動感測器|設定濾波模式%filter",
+  "MxMotion.readAccel|block": "讀取加速度%axis軸(mm/s^2)",
+  "MxMotion.readEular|block": "讀取尤拉角%axis(度)",
+  "MxMotion.readGyro|block": "讀取陀螺儀%axis軸(dgree/s)",
   "MxMotion|block": "MxMotion",
   "{id:category}MxMotion": "MxMotion"
 }

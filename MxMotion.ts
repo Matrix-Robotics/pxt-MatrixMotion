@@ -20,7 +20,7 @@ enum FilterType
 	KALMAN // Kalman Filter
 }
 
-//% weight=3 Motion=#8022be icon="f0b2" block="MxMotion"
+//% weight=8 Motion=#000016 icon="\uf0b2" block="MxMotion"
 namespace MxMotion{
 
     const MxMotion_ADDR = 0x23
@@ -107,7 +107,7 @@ namespace MxMotion{
      *read Motion accel data from sensor
      *@param axis [0-2] set the data of axis; eg: 0, 1
     */
-    //%block="read accel data %axis from sensor"
+    //%block="read accel data %axis from sensor(mm/s^2)"
     //%weight=94 %blockID="MxMotion_accel"
     export function readAccel(axis: AxisType): number {
         let out = 0
@@ -135,7 +135,7 @@ namespace MxMotion{
      *read Motion gyro data from sensor
      *@param axis [0-2] set the data of axis; eg: 0, 1
     */
-    //%block="read gyro data %axis from sensor"
+    //%block="read gyro data %axis from sensor(dgree/s)"
     //%weight=94 %blockID="MxMotion_gyro"
     export function readGyro(axis: AxisType): number {
         let out = 0

@@ -1,10 +1,10 @@
 {
-  "MxMotion.init": "start up the motion sensor",
-  "MxMotion.init|param|filter": "[0-3] set the type of filter; eg: 0, 1",
-  "MxMotion.readAccel": "read Motion accel data from sensor",
-  "MxMotion.readAccel|param|axis": "[0-2] set the data of axis; eg: 0, 1",
-  "MxMotion.readEular": "read Motion eular data from sensor",
-  "MxMotion.readEular|param|axis": "[0-2] set the data of axis; eg: 0, 1",
-  "MxMotion.readGyro": "read Motion gyro data from sensor",
-  "MxMotion.readGyro|param|axis": "[0-2] set the data of axis; eg: 0, 1"
+  "MxMotion.init": "啟動運動感測器",
+  "MxMotion.init|param|filter": "[0-3] 設定濾波模式; eg: 0, 1",
+  "MxMotion.readAccel": "讀取加速度",
+  "MxMotion.readAccel|param|axis": "[0-2] 加速度軸; eg: 0, 1",
+  "MxMotion.readEular": "讀取尤拉角",
+  "MxMotion.readEular|param|axis": "[0-2] 尤拉角; eg: 0, 1",
+  "MxMotion.readGyro": "讀取陀螺儀",
+  "MxMotion.readGyro|param|axis": "[0-2] 陀螺儀軸; eg: 0, 1"
 }
