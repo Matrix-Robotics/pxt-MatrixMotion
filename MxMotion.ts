@@ -20,7 +20,7 @@ enum FilterType
 	KALMAN // Kalman Filter
 }
 
-//% weight=8 Motion=#000016 icon="\uf0b2" block="MxMotion"
+//% weight=8 color=#000016 icon="\uf0b2" block="MxMotion"
 namespace MxMotion{
 
     const MxMotion_ADDR = 0x23
