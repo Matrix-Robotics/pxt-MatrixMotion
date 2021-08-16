@@ -9,8 +9,8 @@
     "files": [
         "README.md",
         "MxMotion.ts",
-        "_locales/zh-tw/MxMotion-jsdoc-strings.json",
-        "_locales/zh-tw/MxMotion-strings.json"
+        "_locales/zh-tw/MatrixMotion-jsdoc-strings.json",
+        "_locales/zh-tw/MatrixMotion-strings.json"
     ],
     "testFiles": [
         "test.ts"
