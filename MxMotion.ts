@@ -12,13 +12,6 @@ enum EularType
 	Yaw
 }
 
-enum FilterType
-{
-	NONE = 0, 
-	GYRO, // Gyro angle data
-	CPLTY, // Complimentary_filter
-	KALMAN // Kalman Filter
-}
 
 //% weight=8 color=#000016 icon="\uf0b2" block="MxMotion"
 namespace MxMotion{
@@ -29,40 +22,36 @@ namespace MxMotion{
     {
 		Device_ID = 1,
 		Device_CONFIG,
-		ROLL_H,
 		ROLL_L,
-		YAW_H,
-		YAW_L,
+		ROLL_H,
 		PITCH_L,
-		GYRO_X_H,
+		PITCH_H,
+		YAW_L,
+		YAW_H,
 		GYRO_X_L,
-		GYRO_Y_H,
+		GYRO_X_H,
 		GYRO_Y_L,
-		GYRO_Z_H,
+		GYRO_Y_H,
 		GYRO_Z_L,
-		ACCEL_X_H,
+		GYRO_Z_H,
 		ACCEL_X_L,
-		ACCEL_Y_H,
+		ACCEL_X_H,
 		ACCEL_Y_L,
-		ACCEL_Z_H,
+		ACCEL_Y_H,
 		ACCEL_Z_L,
-		Temp
+		ACCEL_Z_H,
     }
 
     /**
      *start up the motion sensor
-     *@param filter [0-3] set the type of filter; eg: 0, 1
     */
-    //%block="start up the motion sensor|set filter %filter"
+    //%block="start up the motion sensor"
     //%weight=994 inlineInputMode="external" %blockID="MxMotion_init"
-    export function init(filter: FilterType): void {
-        let setting = 0x04
-        setting += <number>filter
-
+    export function init(): void {
         if(i2cRead(MotionReg.Device_ID) == 0x44){
-            i2cWrite(MotionReg.Device_CONFIG, 0x08); // reset
+            i2cWrite(MotionReg.Device_CONFIG, 0x02); // reset
             basic.pause(500);
-            i2cWrite(MotionReg.Device_CONFIG, setting); // enable
+            i2cWrite(MotionReg.Device_CONFIG, 0x01); // enable
         }
     }
 
@@ -83,12 +72,9 @@ namespace MxMotion{
                 }
                 break
             case 1:
-                out = i2cRead(MotionReg.PITCH_L)
-                if(out > 180){
-                    out = -1
-                }
-                else{
-                    out -= 90
+                out = i2cRead(MotionReg.PITCH_H) << 8 | i2cRead(MotionReg.PITCH_L)
+                if(out > 32767){
+                    out -= 65536
                 }
                 break
             case 2:

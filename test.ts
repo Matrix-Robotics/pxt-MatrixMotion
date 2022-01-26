@@ -1,4 +1,4 @@
-MxMotion.init(FilterType.NONE)
+MxMotion.init()
 basic.forever(function () {
     serial.writeString("roll=")
     serial.writeLine("" + (MxMotion.readEular(EularType.Roll)))
