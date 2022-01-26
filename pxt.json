@@ -1,6 +1,6 @@
 {
     "name": "MatrixMotion",
-    "version": "1.0.6",
+    "version": "1.0.5",
     "description": "The extension for MATRIX Motion Sensor",
     "license": "MIT",
     "dependencies": {
